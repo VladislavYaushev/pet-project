@@ -1,13 +1,28 @@
+import React from 'react'
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <h1>
-        Hello
-      </h1>
-    </div>
-  );
-}
+export default class App extends React.Component{
+  
+  constructor (props) {
+    super(props)
+    this.state = {
+      counter: 0
+    }
+  }
+  
+  counterPlus = () => {
+    this.setState(state => ({
+      counter: ++state.counter
+    }))
+  }
 
-export default App;
+  render (){
+    return (
+    <>
+      <h1 onClick={this.counterPlus}>
+        Hello {this.state.counter}
+      </h1>
+    </>
+  )
+  }
+}
