@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css';
 
-export default class App extends React.Component{
+export default class App extends React.Component {
   
   constructor (props) {
     super(props)
@@ -18,11 +18,11 @@ export default class App extends React.Component{
 
   render (){
     return (
-    <>
-      <h1 onClick={this.counterPlus}>
+    <div className='obertka'>
+      <h1 onClick={this.counterPlus} className="counter">
         Hello {this.state.counter}
       </h1>
-    </>
+    </div>
   )
   }
 }
